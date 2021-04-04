@@ -69,7 +69,6 @@ def get_tasks():
         print('Yes')
         print('Yes')
         print('Yes')
-        print('Yes')
 
     return jsonify({'tasks': tasks})
 
