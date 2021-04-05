@@ -10,7 +10,7 @@ script:
   - docker image build -t zaidalica/cps847-group6-assignment2 .
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "Q\!w2e3r4t5" | docker login -u "filipegorodscy" --password-stdin
   - docker push zaidalica/cps847-group6-assignment2
 ##kgk
 #sudo: required
