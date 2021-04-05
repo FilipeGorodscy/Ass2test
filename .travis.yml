@@ -11,9 +11,9 @@ services:
 install: pip install -r requirements.txt
 script:
   - coverage run unittest_api.py
-  - docker build -t filipegorodscy/a2 .
+  - docker build -t $DOCKER_ID/a2 .
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - docker logout
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password-stdin
-  - docker push filipegorodscy/a2
+  - docker push $DOCKER_ID/a2
