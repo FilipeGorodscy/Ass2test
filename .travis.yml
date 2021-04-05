@@ -10,6 +10,8 @@ script:
   - docker build -t filipegorodscy/a2 .
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - docker logout
+  - docker login -u filipegorodscy
   #- echo "Q\!w2e3r4t5" | docker login -u "filipegorodscy" --password-stdin
   - docker push filipegorodscy/a2
 ##kgk
