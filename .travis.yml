@@ -7,11 +7,11 @@ services:
 install: "pip install -r requirements.txt"
 script:
   - coverage run unittest_api.py
-  - docker image build -t zaidalica/cps847-group6-assignment2 .
+  - docker image build -t assignment2 .
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - echo "Q\!w2e3r4t5" | docker login -u "filipegorodscy" --password-stdin
-  - docker push zaidalica/cps847-group6-assignment2
+  - docker push assignment2
 ##kgk
 #sudo: required
 #language: python
